@@ -1,0 +1,15 @@
+.container {
+    background-color: rgb(201, 33, 216);
+}
+.img {
+    height: 25%;
+    width: 25%;
+    /* box-sizing: border-box; */
+    border-radius: 50%;
+}
+.search {
+    align-items: center;
+    justify-content: center;
+    
+    background-color: aqua;
+}
