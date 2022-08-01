@@ -16,6 +16,7 @@ function Fetch({ url }) {
             result.data.results.forEach(element => {
                 element.salary = "$1,0000";
             });
+            
 
             
             setData(result.data.results);
@@ -23,6 +24,8 @@ function Fetch({ url }) {
             localStorage.setItem('details', JSON.stringify(result.data.results))
         })
     }, [])
+    3
+    
 
     const personDetails = () => {
         let searchData = data.filter((item) => item.name.first == searchItems);
@@ -33,18 +36,18 @@ function Fetch({ url }) {
     return (
         <div>
 
-            <div>
+            <div className='submit'>
                 <input type="text" placeholder='Enter the text' className='search bg-light ' onChange={(e)=>setSearchItems(e.target.value)}/>
                 <button className='searchs' onClick={()=>personDetails()}>submit</button>
             </div>
 
-            <div className=" container d-flex flex-column gap-5">
+            <div className=" container d-flex flex-column">
 
                 {
                     (data.length > 0) && data.map((details, index) => (
                         <div className="d-flex  flex-row" key={index}>
                             <img src={details.picture.large} className="img" /><br />
-                            <div className="d-flex flex-column p-4">
+                            <div className="total d-flex flex-column p-4">
                                 <span>{"Title : "}{details.name.title}<br />{"First Name : "}{details.name.first}<br /> {"Last Name : "}{details.name.last}</span> <br></br>
                                 <span>{"Email : "}{details.email} </span>
                                 <span>{"Country : "}{details.location.country}</span>

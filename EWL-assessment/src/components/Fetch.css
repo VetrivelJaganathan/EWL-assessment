@@ -13,3 +13,13 @@
     
     background-color: aqua;
 }
+.submit {
+    margin-left: 342px;
+}
+.container {
+    margin-left: 8px;
+    margin-top: 30px;
+}
+button.searchs {
+    border-color: blue;
+}
