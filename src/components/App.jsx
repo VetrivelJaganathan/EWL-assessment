@@ -1,8 +1,10 @@
-import React from 'react'
+import React , {useState ,useEffect} from 'react'
+import Fetch from './Fetch';
 
 function App() {
+  const [Url, setUrl] = useState(`https://randomuser.me/api/?results=10`)
   return (
-    <div>hello</div>
+    <div><Fetch url ={Url}/></div>
   )
 }
 
