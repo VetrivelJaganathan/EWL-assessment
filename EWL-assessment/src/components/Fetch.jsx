@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Fetch.css";
+import {MediaQueryObject} from "react-media"
 
 function Fetch({ url }) {
 
@@ -24,8 +25,8 @@ function Fetch({ url }) {
             localStorage.setItem('details', JSON.stringify(result.data.results))
         })
     }, [])
-    3
-    
+
+
 
     const personDetails = () => {
         let searchData = data.filter((item) => item.name.first == searchItems);
@@ -59,7 +60,7 @@ function Fetch({ url }) {
                     ))
                 }
                 {
-                    (data.length === 0) && <span>{"No Data"}</span>
+                    (data.length === 0) && <span><b>{"Can't find the data"}</b></span>
                 }
 
                 
